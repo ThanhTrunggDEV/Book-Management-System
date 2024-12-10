@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 using System.Security.Cryptography.X509Certificates;
+using System.Windows.Forms;
 
 namespace BookManagementSystem
 {
@@ -22,26 +23,26 @@ namespace BookManagementSystem
             return 0;
         }
         static ManageBooks()
-        {
-            List<string> Input = File.ReadAllLines("D:\\Coding Space\\C#\\BookManagementSystem\\BookManagementSystem\\Data.txt").ToList();
-            for (int i = 0; i < Input.Count; i++)
-            {
-                int index = FindIndex(Input[i]);
-                string Title = Input[i].Substring(0, index);
-                Input[i] = Input[i].Substring(index + 1);
+        { 
+                List<string> Input = File.ReadAllLines("D:\\Coding Space\\C#\\BookManagementSystem\\Data.txt").ToList();
+                for (int i = 0; i < Input.Count; i++)
+                {
+                    int index = FindIndex(Input[i]);
+                    string Title = Input[i].Substring(0, index);
+                    Input[i] = Input[i].Substring(index + 1);
 
-                index = FindIndex(Input[i]);
-                string AuthorName = Input[i].Substring(0, index);
-                Input[i] = Input[i].Substring(index + 1);
+                    index = FindIndex(Input[i]);
+                    string AuthorName = Input[i].Substring(0, index);
+                    Input[i] = Input[i].Substring(index + 1);
 
-                index = FindIndex(Input[i]);
-                bool ReadStatus = bool.Parse(Input[i].Substring(0, index));
-                Input[i] = Input[i].Substring(index + 1);
+                    index = FindIndex(Input[i]);
+                    bool ReadStatus = bool.Parse(Input[i].Substring(0, index));
+                    Input[i] = Input[i].Substring(index + 1);
 
-                double BuyingPrice = double.Parse(Input[i]); 
+                    double BuyingPrice = double.Parse(Input[i]);
 
-                ListBooks.Add(new Book(Title, AuthorName, BuyingPrice, ReadStatus));
-            }
+                    ListBooks.Add(new Book(Title, AuthorName, BuyingPrice, ReadStatus));
+                }
         }
         public static void SaveBooksToFile()
         {
@@ -50,7 +51,7 @@ namespace BookManagementSystem
             {
                    BookData += $"{item.Title};{item.AuthorName};{item.ReadStatus};{item.BuyingPrice}\n";
             }
-            File.WriteAllText("D:\\Coding Space\\C#\\BookManagementSystem\\BookManagementSystem\\Data.txt", BookData);
+            File.WriteAllText("D:\\Coding Space\\C#\\BookManagementSystem\\Data.txt", BookData);
         }
         public static void AddBook(Book book)
         {
@@ -60,7 +61,15 @@ namespace BookManagementSystem
         {
             ListBooks.Remove(book);
         }
-        
+        public static void GetTotalPrice()
+        {
+            double totalPrice = 0;
+            foreach (var item in ManageBooks.ListBooks)
+            {
+                totalPrice += item.BuyingPrice;
+            }
+            MessageBox.Show($"Your Total Amount Of Money Is {totalPrice} VNĐ");
+        }
         public static Book SearchBook(string Title)
         {
             if (ListBooks.FirstOrDefault(item => item.Title == Title) == null)

@@ -10,3 +10,27 @@ D:\Coding Space\C#\BookManagementSystem\BookManagementSystem\obj\Debug\BookManag
 D:\Coding Space\C#\BookManagementSystem\BookManagementSystem\obj\Debug\BookManagementSystem.LoginForm.resources
 D:\Coding Space\C#\BookManagementSystem\BookManagementSystem\obj\Debug\BookManagementSystem.MainForm.resources
 D:\Coding Space\C#\BookManagementSystem\BookManagementSystem\obj\Debug\BookManagementSystem.Add_Book_Form.resources
+D:\Coding Space\C#\Book Magagement System\bin\Debug\BookManagementSystem.exe.config
+D:\Coding Space\C#\Book Magagement System\bin\Debug\BookManagementSystem.exe
+D:\Coding Space\C#\Book Magagement System\bin\Debug\BookManagementSystem.pdb
+D:\Coding Space\C#\Book Magagement System\obj\Debug\BookManagementSystem.csproj.AssemblyReference.cache
+D:\Coding Space\C#\Book Magagement System\obj\Debug\BookManagementSystem.Add_Book_Form.resources
+D:\Coding Space\C#\Book Magagement System\obj\Debug\BookManagementSystem.MainForm.resources
+D:\Coding Space\C#\Book Magagement System\obj\Debug\BookManagementSystem.LoginForm.resources
+D:\Coding Space\C#\Book Magagement System\obj\Debug\BookManagementSystem.Properties.Resources.resources
+D:\Coding Space\C#\Book Magagement System\obj\Debug\BookManagementSystem.csproj.GenerateResource.cache
+D:\Coding Space\C#\Book Magagement System\obj\Debug\BookManagementSystem.csproj.CoreCompileInputs.cache
+D:\Coding Space\C#\Book Magagement System\obj\Debug\BookManagementSystem.exe
+D:\Coding Space\C#\Book Magagement System\obj\Debug\BookManagementSystem.pdb
+D:\Coding Space\C#\BookManagementSystem\bin\Debug\BookManagementSystem.exe.config
+D:\Coding Space\C#\BookManagementSystem\bin\Debug\BookManagementSystem.exe
+D:\Coding Space\C#\BookManagementSystem\bin\Debug\BookManagementSystem.pdb
+D:\Coding Space\C#\BookManagementSystem\obj\Debug\BookManagementSystem.csproj.AssemblyReference.cache
+D:\Coding Space\C#\BookManagementSystem\obj\Debug\BookManagementSystem.Add_Book_Form.resources
+D:\Coding Space\C#\BookManagementSystem\obj\Debug\BookManagementSystem.MainForm.resources
+D:\Coding Space\C#\BookManagementSystem\obj\Debug\BookManagementSystem.LoginForm.resources
+D:\Coding Space\C#\BookManagementSystem\obj\Debug\BookManagementSystem.Properties.Resources.resources
+D:\Coding Space\C#\BookManagementSystem\obj\Debug\BookManagementSystem.csproj.GenerateResource.cache
+D:\Coding Space\C#\BookManagementSystem\obj\Debug\BookManagementSystem.csproj.CoreCompileInputs.cache
+D:\Coding Space\C#\BookManagementSystem\obj\Debug\BookManagementSystem.exe
+D:\Coding Space\C#\BookManagementSystem\obj\Debug\BookManagementSystem.pdb

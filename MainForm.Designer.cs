@@ -50,35 +50,39 @@
             // 
             this.splitter1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(171, 846);
+            this.splitter1.Size = new System.Drawing.Size(128, 687);
             this.splitter1.TabIndex = 0;
             this.splitter1.TabStop = false;
             // 
             // splitter2
             // 
             this.splitter2.BackColor = System.Drawing.SystemColors.Info;
-            this.splitter2.Location = new System.Drawing.Point(171, 0);
+            this.splitter2.Location = new System.Drawing.Point(128, 0);
+            this.splitter2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(241, 846);
+            this.splitter2.Size = new System.Drawing.Size(181, 687);
             this.splitter2.TabIndex = 1;
             this.splitter2.TabStop = false;
             // 
             // splitter3
             // 
             this.splitter3.BackColor = System.Drawing.SystemColors.Info;
-            this.splitter3.Location = new System.Drawing.Point(412, 0);
+            this.splitter3.Location = new System.Drawing.Point(309, 0);
+            this.splitter3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitter3.Name = "splitter3";
-            this.splitter3.Size = new System.Drawing.Size(249, 846);
+            this.splitter3.Size = new System.Drawing.Size(187, 687);
             this.splitter3.TabIndex = 2;
             this.splitter3.TabStop = false;
             // 
             // splitter4
             // 
             this.splitter4.BackColor = System.Drawing.SystemColors.Info;
-            this.splitter4.Location = new System.Drawing.Point(661, 0);
+            this.splitter4.Location = new System.Drawing.Point(496, 0);
+            this.splitter4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitter4.Name = "splitter4";
-            this.splitter4.Size = new System.Drawing.Size(141, 846);
+            this.splitter4.Size = new System.Drawing.Size(106, 687);
             this.splitter4.TabIndex = 3;
             this.splitter4.TabStop = false;
             // 
@@ -86,9 +90,10 @@
             // 
             this.bookTitleLable.AutoSize = true;
             this.bookTitleLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookTitleLable.Location = new System.Drawing.Point(254, 9);
+            this.bookTitleLable.Location = new System.Drawing.Point(190, 7);
+            this.bookTitleLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bookTitleLable.Name = "bookTitleLable";
-            this.bookTitleLable.Size = new System.Drawing.Size(78, 16);
+            this.bookTitleLable.Size = new System.Drawing.Size(65, 13);
             this.bookTitleLable.TabIndex = 4;
             this.bookTitleLable.Text = "Book Title";
             // 
@@ -96,9 +101,10 @@
             // 
             this.authorNameLable.AutoSize = true;
             this.authorNameLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.authorNameLable.Location = new System.Drawing.Point(491, 9);
+            this.authorNameLable.Location = new System.Drawing.Point(368, 7);
+            this.authorNameLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.authorNameLable.Name = "authorNameLable";
-            this.authorNameLable.Size = new System.Drawing.Size(96, 16);
+            this.authorNameLable.Size = new System.Drawing.Size(80, 13);
             this.authorNameLable.TabIndex = 5;
             this.authorNameLable.Text = "Author Name";
             // 
@@ -106,10 +112,10 @@
             // 
             this.bookTitleList.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.bookTitleList.FormattingEnabled = true;
-            this.bookTitleList.ItemHeight = 16;
-            this.bookTitleList.Location = new System.Drawing.Point(171, 46);
+            this.bookTitleList.Location = new System.Drawing.Point(128, 37);
+            this.bookTitleList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bookTitleList.Name = "bookTitleList";
-            this.bookTitleList.Size = new System.Drawing.Size(241, 804);
+            this.bookTitleList.Size = new System.Drawing.Size(182, 654);
             this.bookTitleList.TabIndex = 7;
             this.bookTitleList.TabStop = false;
             // 
@@ -117,10 +123,10 @@
             // 
             this.readStatusList.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.readStatusList.FormattingEnabled = true;
-            this.readStatusList.ItemHeight = 16;
-            this.readStatusList.Location = new System.Drawing.Point(661, 46);
+            this.readStatusList.Location = new System.Drawing.Point(496, 37);
+            this.readStatusList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.readStatusList.Name = "readStatusList";
-            this.readStatusList.Size = new System.Drawing.Size(141, 852);
+            this.readStatusList.Size = new System.Drawing.Size(107, 693);
             this.readStatusList.TabIndex = 9;
             this.readStatusList.TabStop = false;
             // 
@@ -128,10 +134,10 @@
             // 
             this.priceList.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.priceList.FormattingEnabled = true;
-            this.priceList.ItemHeight = 16;
-            this.priceList.Location = new System.Drawing.Point(803, 46);
+            this.priceList.Location = new System.Drawing.Point(602, 37);
+            this.priceList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.priceList.Name = "priceList";
-            this.priceList.Size = new System.Drawing.Size(154, 804);
+            this.priceList.Size = new System.Drawing.Size(116, 654);
             this.priceList.TabIndex = 10;
             this.priceList.TabStop = false;
             // 
@@ -139,10 +145,10 @@
             // 
             this.authorNameList.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.authorNameList.FormattingEnabled = true;
-            this.authorNameList.ItemHeight = 16;
-            this.authorNameList.Location = new System.Drawing.Point(412, 46);
+            this.authorNameList.Location = new System.Drawing.Point(309, 37);
+            this.authorNameList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.authorNameList.Name = "authorNameList";
-            this.authorNameList.Size = new System.Drawing.Size(249, 804);
+            this.authorNameList.Size = new System.Drawing.Size(188, 654);
             this.authorNameList.TabIndex = 11;
             this.authorNameList.TabStop = false;
             // 
@@ -150,9 +156,10 @@
             // 
             this.readStatusLable.AutoSize = true;
             this.readStatusLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.readStatusLable.Location = new System.Drawing.Point(676, 13);
+            this.readStatusLable.Location = new System.Drawing.Point(507, 11);
+            this.readStatusLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.readStatusLable.Name = "readStatusLable";
-            this.readStatusLable.Size = new System.Drawing.Size(113, 16);
+            this.readStatusLable.Size = new System.Drawing.Size(94, 13);
             this.readStatusLable.TabIndex = 12;
             this.readStatusLable.Text = "Reading Status";
             // 
@@ -160,17 +167,19 @@
             // 
             this.priceLable.AutoSize = true;
             this.priceLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceLable.Location = new System.Drawing.Point(834, 13);
+            this.priceLable.Location = new System.Drawing.Point(626, 11);
+            this.priceLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.priceLable.Name = "priceLable";
-            this.priceLable.Size = new System.Drawing.Size(94, 16);
+            this.priceLable.Size = new System.Drawing.Size(78, 13);
             this.priceLable.TabIndex = 13;
             this.priceLable.Text = "Buying Price";
             // 
             // addBookButton
             // 
-            this.addBookButton.Location = new System.Drawing.Point(12, 46);
+            this.addBookButton.Location = new System.Drawing.Point(9, 37);
+            this.addBookButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addBookButton.Name = "addBookButton";
-            this.addBookButton.Size = new System.Drawing.Size(87, 23);
+            this.addBookButton.Size = new System.Drawing.Size(65, 19);
             this.addBookButton.TabIndex = 14;
             this.addBookButton.Text = "Add Book";
             this.addBookButton.UseVisualStyleBackColor = true;
@@ -182,17 +191,20 @@
             this.menuBox.Controls.Add(this.getTotalPrice);
             this.menuBox.Controls.Add(this.addBookButton);
             this.menuBox.Location = new System.Drawing.Point(0, 0);
+            this.menuBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.menuBox.Name = "menuBox";
-            this.menuBox.Size = new System.Drawing.Size(171, 863);
+            this.menuBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.menuBox.Size = new System.Drawing.Size(128, 701);
             this.menuBox.TabIndex = 15;
             this.menuBox.TabStop = false;
             this.menuBox.Text = "Menu";
             // 
             // getTotalPrice
             // 
-            this.getTotalPrice.Location = new System.Drawing.Point(12, 75);
+            this.getTotalPrice.Location = new System.Drawing.Point(9, 61);
+            this.getTotalPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.getTotalPrice.Name = "getTotalPrice";
-            this.getTotalPrice.Size = new System.Drawing.Size(86, 24);
+            this.getTotalPrice.Size = new System.Drawing.Size(64, 20);
             this.getTotalPrice.TabIndex = 15;
             this.getTotalPrice.Text = "Total Price";
             this.getTotalPrice.UseVisualStyleBackColor = true;
@@ -200,10 +212,10 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(958, 846);
+            this.ClientSize = new System.Drawing.Size(718, 687);
             this.Controls.Add(this.menuBox);
             this.Controls.Add(this.priceLable);
             this.Controls.Add(this.readStatusLable);
@@ -217,10 +229,13 @@
             this.Controls.Add(this.splitter3);
             this.Controls.Add(this.splitter2);
             this.Controls.Add(this.splitter1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Book Management System";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuBox.ResumeLayout(false);

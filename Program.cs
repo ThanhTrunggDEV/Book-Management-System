@@ -17,8 +17,6 @@ namespace BookManagementSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             LoginForm form2 = new LoginForm();
-            
-            
             if (form2.ShowDialog() == DialogResult.OK)
             {
                 Application.Run(new MainForm());

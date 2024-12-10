@@ -52,12 +52,7 @@ namespace BookManagementSystem
 
         private void getTotalPrice_Click(object sender, EventArgs e)
         {
-            double totalPrice = 0;
-            foreach(var item in ManageBooks.ListBooks)
-            {
-                totalPrice += item.BuyingPrice;
-            }
-            MessageBox.Show($"Your Total Amount Of Money Is {totalPrice} VNĐ");
+            ManageBooks.GetTotalPrice();
         }
     }
 }
