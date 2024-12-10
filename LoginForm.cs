@@ -19,10 +19,14 @@ namespace BookManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //if(usernameTextbox.Text == "Thanhtrung" && passwordTextbox.Text == "trung1506")
-            //{
+            if(usernameTextbox.Text == "Trung1506" && passwordTextbox.Text == "trung1506")
+            {
                 DialogResult = DialogResult.OK;
-            //}
+            }
+            else
+            {
+                MessageBox.Show("User Name Or Password is wrong");
+            }
             
         }
     }

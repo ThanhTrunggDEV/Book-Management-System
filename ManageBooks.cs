@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Threading.Tasks;
+using System.Security.Cryptography.X509Certificates;
 
 namespace BookManagementSystem
 {
-    public class ManageBooks
+    public static class ManageBooks
     {
-        public List<Book> ListBooks { get; set; }
-        private int FindIndex(string input)
+        public static List<Book> ListBooks = new List<Book>();
+        private static int FindIndex(string input)
         {
             
             for(int i = 0; i < input.Length; i++)
@@ -20,9 +21,8 @@ namespace BookManagementSystem
             }
             return 0;
         }
-        public ManageBooks()
+        static ManageBooks()
         {
-            ListBooks = new List<Book>();
             List<string> Input = File.ReadAllLines("D:\\Coding Space\\C#\\BookManagementSystem\\BookManagementSystem\\Data.txt").ToList();
             for (int i = 0; i < Input.Count; i++)
             {
@@ -35,7 +35,7 @@ namespace BookManagementSystem
                 Input[i] = Input[i].Substring(index + 1);
 
                 index = FindIndex(Input[i]);
-                int ReadStatus = int.Parse(Input[i].Substring(0, index));
+                bool ReadStatus = bool.Parse(Input[i].Substring(0, index));
                 Input[i] = Input[i].Substring(index + 1);
 
                 double BuyingPrice = double.Parse(Input[i]); 
@@ -43,16 +43,25 @@ namespace BookManagementSystem
                 ListBooks.Add(new Book(Title, AuthorName, BuyingPrice, ReadStatus));
             }
         }
-        public void AddBook(Book book)
+        public static void SaveBooksToFile()
+        {
+            string BookData = string.Empty;
+            foreach (var item in ListBooks)
+            {
+                   BookData += $"{item.Title};{item.AuthorName};{item.ReadStatus};{item.BuyingPrice}\n";
+            }
+            File.WriteAllText("D:\\Coding Space\\C#\\BookManagementSystem\\BookManagementSystem\\Data.txt", BookData);
+        }
+        public static void AddBook(Book book)
         {
             ListBooks.Add(book);
         }
-        public void RemoveBook(Book book)
+        public static void RemoveBook(Book book)
         {
             ListBooks.Remove(book);
         }
         
-        public Book SearchBook(string Title)
+        public static Book SearchBook(string Title)
         {
             if (ListBooks.FirstOrDefault(item => item.Title == Title) == null)
             {

@@ -17,18 +17,47 @@ namespace BookManagementSystem
         {
             InitializeComponent();
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            ManageBooks test = new ManageBooks();
-            LoginForm 
-            foreach(var item in test.ListBooks)
+            Add_Book_Form add_Book = new Add_Book_Form();
+            add_Book.ShowDialog();
+            bookTitleList.Items.Clear();
+            authorNameList.Items.Clear();
+            readStatusList.Items.Clear();
+            priceList.Items.Clear();
+            MainForm_Load(sender, e);
+        }
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            foreach (var item in ManageBooks.ListBooks)
             {
-                Book b = item;
-                //textBox1.Text = b.Title;
-                listBox1.Items.Add($"{b.Title} | {b.AuthorName} | {b.ReadStatus} | {b.BuyingPrice}");
-                listBox1.Items.Add("--------------------------------------------------------------");
+                bookTitleList.Items.Add(item.Title);
+                bookTitleList.Items.Add("------------------------------------------------------------------------------------------------------");
+                authorNameList.Items.Add(item.AuthorName);
+                authorNameList.Items.Add("-----------------------------------------------------------------------------------------------------");
+                if (!item.ReadStatus)
+                    readStatusList.Items.Add("Not Yet");
+                else readStatusList.Items.Add("Already Read");
+                readStatusList.Items.Add("---------------------------------------------------------------------------------------------");
+                priceList.Items.Add(item.BuyingPrice + " VNĐ");
+                priceList.Items.Add("-------------------------------------------------------------------------------------------");
             }
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ManageBooks.SaveBooksToFile();
+        }
+
+        private void getTotalPrice_Click(object sender, EventArgs e)
+        {
+            double totalPrice = 0;
+            foreach(var item in ManageBooks.ListBooks)
+            {
+                totalPrice += item.BuyingPrice;
+            }
+            MessageBox.Show($"Your Total Amount Of Money Is {totalPrice} VNĐ");
         }
     }
 }

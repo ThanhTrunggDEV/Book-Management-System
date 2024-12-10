@@ -21,7 +21,6 @@ namespace BookManagementSystem
             
             if (form2.ShowDialog() == DialogResult.OK)
             {
-   //             form2.Close();
                 Application.Run(new MainForm());
             }
         }

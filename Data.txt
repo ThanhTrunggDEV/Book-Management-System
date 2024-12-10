@@ -1,3 +1,7 @@
-﻿Kỷ Luật Bản Thân;AuthorName;0;10000
-Ba Người Thầy Vĩ Đại;AuthorName;0;10000
-Harvard Bốn Rưỡi Sáng;AuthorName;0;10000
+Kỷ Luật Bản Thân;Peg Dawson and Richchard Guare;False;20000
+Ba Người Thầy Vĩ Đại;Robin Sharma;False;38000
+Harvard Bốn Rưỡi Sáng;Xiu-Ying-Wei;True;60000
+Thép Đã Tôi Thế Đấy;Nikolai A. Ostrovsky;False;47000
+Đời Ngắn Đừng Ngủ Dài;Robin Sharma;True;20000
+Chú Bé Mang Pyjama Sọc;John Boyne;True;20000
+Chủ Nghĩa Khắc Kỷ;Mathew J. Van Natta;True;30000

@@ -9,3 +9,4 @@ D:\Coding Space\C#\BookManagementSystem\BookManagementSystem\obj\Debug\BookManag
 D:\Coding Space\C#\BookManagementSystem\BookManagementSystem\obj\Debug\BookManagementSystem.pdb
 D:\Coding Space\C#\BookManagementSystem\BookManagementSystem\obj\Debug\BookManagementSystem.LoginForm.resources
 D:\Coding Space\C#\BookManagementSystem\BookManagementSystem\obj\Debug\BookManagementSystem.MainForm.resources
+D:\Coding Space\C#\BookManagementSystem\BookManagementSystem\obj\Debug\BookManagementSystem.Add_Book_Form.resources
