@@ -1,6 +1,6 @@
 ﻿namespace BookManagementSystem
 {
-    partial class Add_Book_Form
+    partial class addBookForm
     {
         /// <summary>
         /// Required designer variable.
@@ -40,78 +40,86 @@
             // 
             // bookTitleTextBox
             // 
-            this.bookTitleTextBox.Location = new System.Drawing.Point(169, 69);
+            this.bookTitleTextBox.Location = new System.Drawing.Point(127, 56);
+            this.bookTitleTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bookTitleTextBox.Name = "bookTitleTextBox";
-            this.bookTitleTextBox.Size = new System.Drawing.Size(213, 22);
+            this.bookTitleTextBox.Size = new System.Drawing.Size(161, 20);
             this.bookTitleTextBox.TabIndex = 0;
             // 
             // readOrNot
             // 
             this.readOrNot.AutoSize = true;
-            this.readOrNot.Location = new System.Drawing.Point(169, 177);
+            this.readOrNot.Location = new System.Drawing.Point(127, 144);
+            this.readOrNot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.readOrNot.Name = "readOrNot";
-            this.readOrNot.Size = new System.Drawing.Size(113, 20);
+            this.readOrNot.Size = new System.Drawing.Size(90, 17);
             this.readOrNot.TabIndex = 1;
             this.readOrNot.Text = "Already Read";
             this.readOrNot.UseVisualStyleBackColor = true;
             // 
             // authorNameTextBox
             // 
-            this.authorNameTextBox.Location = new System.Drawing.Point(169, 108);
+            this.authorNameTextBox.Location = new System.Drawing.Point(127, 88);
+            this.authorNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.authorNameTextBox.Name = "authorNameTextBox";
-            this.authorNameTextBox.Size = new System.Drawing.Size(213, 22);
+            this.authorNameTextBox.Size = new System.Drawing.Size(161, 20);
             this.authorNameTextBox.TabIndex = 2;
             // 
             // priceTextBox
             // 
-            this.priceTextBox.Location = new System.Drawing.Point(169, 149);
+            this.priceTextBox.Location = new System.Drawing.Point(127, 121);
+            this.priceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.priceTextBox.Name = "priceTextBox";
-            this.priceTextBox.Size = new System.Drawing.Size(213, 22);
+            this.priceTextBox.Size = new System.Drawing.Size(161, 20);
             this.priceTextBox.TabIndex = 3;
             // 
             // addTitleBookLable
             // 
             this.addTitleBookLable.AutoSize = true;
-            this.addTitleBookLable.Location = new System.Drawing.Point(95, 72);
+            this.addTitleBookLable.Location = new System.Drawing.Point(71, 58);
+            this.addTitleBookLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addTitleBookLable.Name = "addTitleBookLable";
-            this.addTitleBookLable.Size = new System.Drawing.Size(68, 16);
+            this.addTitleBookLable.Size = new System.Drawing.Size(55, 13);
             this.addTitleBookLable.TabIndex = 4;
             this.addTitleBookLable.Text = "Book Title";
             // 
             // addAuthorNameLable
             // 
             this.addAuthorNameLable.AutoSize = true;
-            this.addAuthorNameLable.Location = new System.Drawing.Point(78, 111);
+            this.addAuthorNameLable.Location = new System.Drawing.Point(58, 90);
+            this.addAuthorNameLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addAuthorNameLable.Name = "addAuthorNameLable";
-            this.addAuthorNameLable.Size = new System.Drawing.Size(85, 16);
+            this.addAuthorNameLable.Size = new System.Drawing.Size(69, 13);
             this.addAuthorNameLable.TabIndex = 5;
             this.addAuthorNameLable.Text = "Author Name";
             // 
             // addPriceLable
             // 
             this.addPriceLable.AutoSize = true;
-            this.addPriceLable.Location = new System.Drawing.Point(116, 155);
+            this.addPriceLable.Location = new System.Drawing.Point(87, 126);
+            this.addPriceLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addPriceLable.Name = "addPriceLable";
-            this.addPriceLable.Size = new System.Drawing.Size(38, 16);
+            this.addPriceLable.Size = new System.Drawing.Size(31, 13);
             this.addPriceLable.TabIndex = 6;
             this.addPriceLable.Text = "Price";
             // 
             // addBookButton
             // 
-            this.addBookButton.Location = new System.Drawing.Point(169, 203);
+            this.addBookButton.Location = new System.Drawing.Point(127, 165);
+            this.addBookButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addBookButton.Name = "addBookButton";
-            this.addBookButton.Size = new System.Drawing.Size(75, 23);
+            this.addBookButton.Size = new System.Drawing.Size(56, 19);
             this.addBookButton.TabIndex = 7;
             this.addBookButton.Text = "Add";
             this.addBookButton.UseVisualStyleBackColor = true;
             this.addBookButton.Click += new System.EventHandler(this.addBookButton_Click);
             // 
-            // Add_Book_Form
+            // addBookForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(487, 279);
+            this.ClientSize = new System.Drawing.Size(365, 227);
             this.Controls.Add(this.addBookButton);
             this.Controls.Add(this.addPriceLable);
             this.Controls.Add(this.addAuthorNameLable);
@@ -120,8 +128,9 @@
             this.Controls.Add(this.authorNameTextBox);
             this.Controls.Add(this.readOrNot);
             this.Controls.Add(this.bookTitleTextBox);
-            this.Name = "Add_Book_Form";
-            this.Text = "Add_Book_Form";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "addBookForm";
+            this.Text = "Add Book";
             this.ResumeLayout(false);
             this.PerformLayout();
 

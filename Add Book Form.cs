@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace BookManagementSystem
 {
-    public partial class Add_Book_Form : Form
+    public partial class addBookForm : Form
     {
-        public Add_Book_Form()
+        public addBookForm()
         {
             InitializeComponent();
         }

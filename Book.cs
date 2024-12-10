@@ -19,6 +19,5 @@ namespace BookManagementSystem
             this.AuthorName = AuthorName;
             this.BuyingPrice = BuyingPrice;
         }
-        
     }
 }

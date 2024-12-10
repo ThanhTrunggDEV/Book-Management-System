@@ -70,14 +70,10 @@ namespace BookManagementSystem
             }
             MessageBox.Show($"Your Total Amount Of Money Is {totalPrice} VNĐ");
         }
-        public static Book SearchBook(string Title)
+        public static void EditBook(Book oldBook, Book newBook)
         {
-            if (ListBooks.FirstOrDefault(item => item.Title == Title) == null)
-            {
-                throw new Exception($"Not Found Book Named {Title}");
-            }
-            else
-                return ListBooks.First(item => item.Title == Title);
-        } 
+            int index = ListBooks.IndexOf(oldBook);
+            ListBooks[index] = newBook;
+        }
     }
 }

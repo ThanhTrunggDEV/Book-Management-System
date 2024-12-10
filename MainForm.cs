@@ -17,16 +17,19 @@ namespace BookManagementSystem
         {
             InitializeComponent();
         }
-        
-        private void button1_Click(object sender, EventArgs e)
+        private void reloadListBook(object sender, EventArgs e)
         {
-            Add_Book_Form add_Book = new Add_Book_Form();
-            add_Book.ShowDialog();
             bookTitleList.Items.Clear();
             authorNameList.Items.Clear();
             readStatusList.Items.Clear();
             priceList.Items.Clear();
             MainForm_Load(sender, e);
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            addBookForm add_Book = new addBookForm();
+            add_Book.ShowDialog();
+            reloadListBook(sender, e);
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -44,7 +47,6 @@ namespace BookManagementSystem
                 priceList.Items.Add("-------------------------------------------------------------------------------------------");
             }
         }
-
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             ManageBooks.SaveBooksToFile();
@@ -53,6 +55,13 @@ namespace BookManagementSystem
         private void getTotalPrice_Click(object sender, EventArgs e)
         {
             ManageBooks.GetTotalPrice();
+        }
+
+        private void editBookButton_Click(object sender, EventArgs e)
+        {
+            editBookForm editBookForm = new editBookForm();
+            editBookForm.ShowDialog();
+            reloadListBook(sender, e);
         }
     }
 }
