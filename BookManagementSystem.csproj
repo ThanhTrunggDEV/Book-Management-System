@@ -74,12 +74,6 @@
     <Compile Include="EditBookForm.Designer.cs">
       <DependentUpon>EditBookForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Testing.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Testing.Designer.cs">
-      <DependentUpon>Testing.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Add Book Form.resx">
       <DependentUpon>Add Book Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,9 +94,6 @@
     </Compile>
     <EmbeddedResource Include="EditBookForm.resx">
       <DependentUpon>EditBookForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Testing.resx">
-      <DependentUpon>Testing.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

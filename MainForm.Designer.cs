@@ -101,7 +101,7 @@
             this.priceList.Location = new System.Drawing.Point(578, 28);
             this.priceList.Margin = new System.Windows.Forms.Padding(2);
             this.priceList.Name = "priceList";
-            this.priceList.Size = new System.Drawing.Size(140, 667);
+            this.priceList.Size = new System.Drawing.Size(141, 667);
             this.priceList.TabIndex = 10;
             this.priceList.TabStop = false;
             // 
@@ -148,13 +148,13 @@
             this.toolStripSeparator2,
             this.editBookToolStripMenuItem});
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(181, 104);
+            this.menuStrip.Size = new System.Drawing.Size(129, 82);
             // 
             // addBookToolStripMenuItem
             // 
             this.addBookToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addBookToolStripMenuItem.Image")));
             this.addBookToolStripMenuItem.Name = "addBookToolStripMenuItem";
-            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.addBookToolStripMenuItem.Text = "Add Book";
             this.addBookToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -162,7 +162,7 @@
             // 
             this.totaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("totaToolStripMenuItem.Image")));
             this.totaToolStripMenuItem.Name = "totaToolStripMenuItem";
-            this.totaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.totaToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.totaToolStripMenuItem.Text = "Total Price";
             this.totaToolStripMenuItem.Click += new System.EventHandler(this.getTotalPrice_Click);
             // 
