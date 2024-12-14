@@ -43,6 +43,7 @@
             this.priceLable = new System.Windows.Forms.Label();
             this.originalPriceTextBook = new System.Windows.Forms.TextBox();
             this.originalPriceLable = new System.Windows.Forms.Label();
+            this.deleteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // findBookTitle
@@ -165,12 +166,23 @@
             this.originalPriceLable.TabIndex = 13;
             this.originalPriceLable.Text = "Original Price";
             // 
+            // deleteButton
+            // 
+            this.deleteButton.Location = new System.Drawing.Point(203, 228);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(75, 23);
+            this.deleteButton.TabIndex = 14;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
             // editBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(392, 254);
+            this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.originalPriceLable);
             this.Controls.Add(this.originalPriceTextBook);
             this.Controls.Add(this.priceLable);
@@ -210,5 +222,6 @@
         private System.Windows.Forms.Label priceLable;
         private System.Windows.Forms.TextBox originalPriceTextBook;
         private System.Windows.Forms.Label originalPriceLable;
+        private System.Windows.Forms.Button deleteButton;
     }
 }

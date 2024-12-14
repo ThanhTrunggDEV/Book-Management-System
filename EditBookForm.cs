@@ -40,5 +40,24 @@ namespace BookManagementSystem
             ManageBooks.EditBook(book, newBook);
             Close();
         }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            var book = ManageBooks.ListBooks.FirstOrDefault(item => item.Title == bookTitle.Text);
+            if(book != null)
+            {
+                var result = MessageBox.Show("Are You Sure?", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    ManageBooks.RemoveBook(book);
+                    Close();
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Not Found");
+            }
+        }
     }
 }
