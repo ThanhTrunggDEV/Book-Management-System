@@ -23,6 +23,7 @@ namespace BookManagementSystem
             authorNameList.Items.Clear();
             readStatusList.Items.Clear();
             priceList.Items.Clear();
+            originalPriceList.Items.Clear();
             MainForm_Load(sender, e);
         }
         private void button1_Click(object sender, EventArgs e)
@@ -45,6 +46,8 @@ namespace BookManagementSystem
                 readStatusList.Items.Add("---------------------------------------------------------------------------------------------");
                 priceList.Items.Add(item.BuyingPrice + " VNĐ");
                 priceList.Items.Add("-------------------------------------------------------------------------------------------");
+                originalPriceList.Items.Add(item.OriginalPrice + " VND");
+                originalPriceList.Items.Add("-------------------------------------------------------------------------------------------");
             }
         }
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)

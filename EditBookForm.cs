@@ -25,6 +25,7 @@ namespace BookManagementSystem
                 bookTitle.Text = book.Title;
                 authorName.Text = book.AuthorName;
                 price.Text = book.BuyingPrice.ToString();
+                originalPriceTextBook.Text = book.OriginalPrice.ToString();
                 readStatus.Checked = book.ReadStatus;
             }
             else
@@ -35,7 +36,7 @@ namespace BookManagementSystem
 
         private void confirmButton_Click(object sender, EventArgs e)
         {
-            Book newBook = new Book(bookTitle.Text, authorName.Text, double.Parse(price.Text), readStatus.Checked);
+            Book newBook = new Book(bookTitle.Text, authorName.Text, double.Parse(price.Text), double.Parse(originalPriceTextBook.Text), readStatus.Checked);
             ManageBooks.EditBook(book, newBook);
             Close();
         }

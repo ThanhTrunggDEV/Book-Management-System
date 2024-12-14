@@ -41,6 +41,8 @@
             this.bookTitleLable = new System.Windows.Forms.Label();
             this.authorNameLable = new System.Windows.Forms.Label();
             this.priceLable = new System.Windows.Forms.Label();
+            this.originalPriceTextBook = new System.Windows.Forms.TextBox();
+            this.originalPriceLable = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // findBookTitle
@@ -62,14 +64,14 @@
             // 
             // bookTitle
             // 
-            this.bookTitle.Location = new System.Drawing.Point(108, 75);
+            this.bookTitle.Location = new System.Drawing.Point(108, 67);
             this.bookTitle.Name = "bookTitle";
             this.bookTitle.Size = new System.Drawing.Size(154, 20);
             this.bookTitle.TabIndex = 2;
             // 
             // authorName
             // 
-            this.authorName.Location = new System.Drawing.Point(108, 111);
+            this.authorName.Location = new System.Drawing.Point(108, 104);
             this.authorName.Name = "authorName";
             this.authorName.Size = new System.Drawing.Size(154, 20);
             this.authorName.TabIndex = 3;
@@ -82,23 +84,23 @@
             // readStatus
             // 
             this.readStatus.AutoSize = true;
-            this.readStatus.Location = new System.Drawing.Point(108, 186);
+            this.readStatus.Location = new System.Drawing.Point(108, 205);
             this.readStatus.Name = "readStatus";
             this.readStatus.Size = new System.Drawing.Size(85, 17);
-            this.readStatus.TabIndex = 5;
+            this.readStatus.TabIndex = 6;
             this.readStatus.Text = "Read Status";
             this.readStatus.UseVisualStyleBackColor = true;
             // 
             // price
             // 
-            this.price.Location = new System.Drawing.Point(108, 149);
+            this.price.Location = new System.Drawing.Point(108, 141);
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(154, 20);
-            this.price.TabIndex = 6;
+            this.price.TabIndex = 4;
             // 
             // confirmButton
             // 
-            this.confirmButton.Location = new System.Drawing.Point(108, 209);
+            this.confirmButton.Location = new System.Drawing.Point(108, 228);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(75, 23);
             this.confirmButton.TabIndex = 7;
@@ -120,7 +122,7 @@
             // 
             this.bookTitleLable.AutoSize = true;
             this.bookTitleLable.BackColor = System.Drawing.SystemColors.Info;
-            this.bookTitleLable.Location = new System.Drawing.Point(42, 78);
+            this.bookTitleLable.Location = new System.Drawing.Point(42, 70);
             this.bookTitleLable.Name = "bookTitleLable";
             this.bookTitleLable.Size = new System.Drawing.Size(60, 13);
             this.bookTitleLable.TabIndex = 9;
@@ -130,7 +132,7 @@
             // 
             this.authorNameLable.AutoSize = true;
             this.authorNameLable.BackColor = System.Drawing.SystemColors.Info;
-            this.authorNameLable.Location = new System.Drawing.Point(33, 114);
+            this.authorNameLable.Location = new System.Drawing.Point(33, 107);
             this.authorNameLable.Name = "authorNameLable";
             this.authorNameLable.Size = new System.Drawing.Size(69, 13);
             this.authorNameLable.TabIndex = 10;
@@ -140,11 +142,28 @@
             // 
             this.priceLable.AutoSize = true;
             this.priceLable.BackColor = System.Drawing.SystemColors.Info;
-            this.priceLable.Location = new System.Drawing.Point(71, 152);
+            this.priceLable.Location = new System.Drawing.Point(71, 144);
             this.priceLable.Name = "priceLable";
             this.priceLable.Size = new System.Drawing.Size(31, 13);
             this.priceLable.TabIndex = 11;
             this.priceLable.Text = "Price";
+            // 
+            // originalPriceTextBook
+            // 
+            this.originalPriceTextBook.Location = new System.Drawing.Point(108, 179);
+            this.originalPriceTextBook.Name = "originalPriceTextBook";
+            this.originalPriceTextBook.Size = new System.Drawing.Size(154, 20);
+            this.originalPriceTextBook.TabIndex = 5;
+            // 
+            // originalPriceLable
+            // 
+            this.originalPriceLable.AutoSize = true;
+            this.originalPriceLable.BackColor = System.Drawing.SystemColors.Info;
+            this.originalPriceLable.Location = new System.Drawing.Point(33, 182);
+            this.originalPriceLable.Name = "originalPriceLable";
+            this.originalPriceLable.Size = new System.Drawing.Size(69, 13);
+            this.originalPriceLable.TabIndex = 13;
+            this.originalPriceLable.Text = "Original Price";
             // 
             // editBookForm
             // 
@@ -152,6 +171,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(392, 254);
+            this.Controls.Add(this.originalPriceLable);
+            this.Controls.Add(this.originalPriceTextBook);
             this.Controls.Add(this.priceLable);
             this.Controls.Add(this.authorNameLable);
             this.Controls.Add(this.bookTitleLable);
@@ -187,5 +208,7 @@
         private System.Windows.Forms.Label bookTitleLable;
         private System.Windows.Forms.Label authorNameLable;
         private System.Windows.Forms.Label priceLable;
+        private System.Windows.Forms.TextBox originalPriceTextBook;
+        private System.Windows.Forms.Label originalPriceLable;
     }
 }

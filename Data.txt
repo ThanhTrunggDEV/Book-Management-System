@@ -1,7 +1,8 @@
-Kỷ Luật Bản Thân;Peg Dawson and Richchard Guare;False;20000
-Ba Người Thầy Vĩ Đại;Robin Sharma;False;38000
-Harvard Bốn Rưỡi Sáng;Xiu-Ying-Wei;True;60000
-Thép Đã Tôi Thế Đấy;Nikolai A. Ostrovsky;False;47000
-Đời Ngắn Đừng Ngủ Dài;Robin Sharma;True;15000
-Chú Bé Mang Pyjama Sọc;John Boyne;True;17000
-Chủ Nghĩa Khắc Kỷ;Mathew J. Van Natta;True;26000
+Kỷ Luật Bản Thân;Peg Dawson and Richchard Guare;True;20000;70000
+Ba Người Thầy Vĩ Đại;Robin Sharma;False;38000;88000
+Harvard Bốn Rưỡi Sáng;Xiu-Ying-Wei;True;60000;110000
+Thép Đã Tôi Thế Đấy;Nikolai A. Ostrovsky;False;47000;98000
+Đời Ngắn Đừng Ngủ Dài;Robin Sharma;True;15000;65000
+Chú Bé Mang Pyjama Sọc;John Boyne;True;17000;67000
+Chủ Nghĩa Khắc Kỷ;Mathew J. Van Natta;True;26000;86000
+Nếu Biết Trăm Năm Là Hữu Hạn;Phạm Lữ Ân;False;0;120000

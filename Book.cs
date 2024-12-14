@@ -12,12 +12,14 @@ namespace BookManagementSystem
         public string AuthorName { get; set; }
         public bool ReadStatus { get; set; }
         public double BuyingPrice { get; set; }
-        public Book(string Title, string AuthorName, double BuyingPrice, bool ReadStatus)
+        public double OriginalPrice { get; set; }
+        public Book(string Title, string AuthorName, double BuyingPrice, double OriginalPrice, bool ReadStatus)
         {
             this.Title = Title;
             this.ReadStatus = ReadStatus;
             this.AuthorName = AuthorName;
             this.BuyingPrice = BuyingPrice;
+            this.OriginalPrice = OriginalPrice;
         }
     }
 }

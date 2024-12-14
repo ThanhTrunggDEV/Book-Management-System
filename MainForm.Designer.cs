@@ -40,13 +40,16 @@
             this.priceLable = new System.Windows.Forms.Label();
             this.menuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.totaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.editBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.splitter3 = new System.Windows.Forms.Splitter();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.splitter4 = new System.Windows.Forms.Splitter();
+            this.originalPriceList = new System.Windows.Forms.ListBox();
+            this.originalPriceLable = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,7 +93,7 @@
             this.readStatusList.Location = new System.Drawing.Point(455, 28);
             this.readStatusList.Margin = new System.Windows.Forms.Padding(2);
             this.readStatusList.Name = "readStatusList";
-            this.readStatusList.Size = new System.Drawing.Size(129, 719);
+            this.readStatusList.Size = new System.Drawing.Size(97, 719);
             this.readStatusList.TabIndex = 9;
             this.readStatusList.TabStop = false;
             // 
@@ -98,7 +101,7 @@
             // 
             this.priceList.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.priceList.FormattingEnabled = true;
-            this.priceList.Location = new System.Drawing.Point(578, 28);
+            this.priceList.Location = new System.Drawing.Point(552, 28);
             this.priceList.Margin = new System.Windows.Forms.Padding(2);
             this.priceList.Name = "priceList";
             this.priceList.Size = new System.Drawing.Size(141, 667);
@@ -120,7 +123,7 @@
             // 
             this.readStatusLable.AutoSize = true;
             this.readStatusLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.readStatusLable.Location = new System.Drawing.Point(469, 9);
+            this.readStatusLable.Location = new System.Drawing.Point(458, 9);
             this.readStatusLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.readStatusLable.Name = "readStatusLable";
             this.readStatusLable.Size = new System.Drawing.Size(94, 13);
@@ -131,7 +134,7 @@
             // 
             this.priceLable.AutoSize = true;
             this.priceLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceLable.Location = new System.Drawing.Point(604, 9);
+            this.priceLable.Location = new System.Drawing.Point(588, 9);
             this.priceLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.priceLable.Name = "priceLable";
             this.priceLable.Size = new System.Drawing.Size(78, 13);
@@ -158,6 +161,12 @@
             this.addBookToolStripMenuItem.Text = "Add Book";
             this.addBookToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(125, 6);
+            // 
             // totaToolStripMenuItem
             // 
             this.totaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("totaToolStripMenuItem.Image")));
@@ -165,6 +174,12 @@
             this.totaToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.totaToolStripMenuItem.Text = "Total Price";
             this.totaToolStripMenuItem.Click += new System.EventHandler(this.getTotalPrice_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(125, 6);
             // 
             // editBookToolStripMenuItem
             // 
@@ -194,31 +209,53 @@
             // 
             this.splitter3.Location = new System.Drawing.Point(455, 0);
             this.splitter3.Name = "splitter3";
-            this.splitter3.Size = new System.Drawing.Size(119, 687);
+            this.splitter3.Size = new System.Drawing.Size(97, 687);
             this.splitter3.TabIndex = 19;
             this.splitter3.TabStop = false;
             // 
-            // toolStripSeparator1
+            // splitter4
             // 
-            this.toolStripSeparator1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.splitter4.Location = new System.Drawing.Point(552, 0);
+            this.splitter4.Name = "splitter4";
+            this.splitter4.Size = new System.Drawing.Size(141, 687);
+            this.splitter4.TabIndex = 20;
+            this.splitter4.TabStop = false;
             // 
-            // toolStripSeparator2
+            // originalPriceList
             // 
-            this.toolStripSeparator2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.originalPriceList.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.originalPriceList.FormattingEnabled = true;
+            this.originalPriceList.Location = new System.Drawing.Point(688, 28);
+            this.originalPriceList.Margin = new System.Windows.Forms.Padding(2);
+            this.originalPriceList.Name = "originalPriceList";
+            this.originalPriceList.Size = new System.Drawing.Size(163, 667);
+            this.originalPriceList.TabIndex = 21;
+            this.originalPriceList.TabStop = false;
+            // 
+            // originalPriceLable
+            // 
+            this.originalPriceLable.AutoSize = true;
+            this.originalPriceLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.originalPriceLable.Location = new System.Drawing.Point(732, 9);
+            this.originalPriceLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.originalPriceLable.Name = "originalPriceLable";
+            this.originalPriceLable.Size = new System.Drawing.Size(83, 13);
+            this.originalPriceLable.TabIndex = 22;
+            this.originalPriceLable.Text = "Original Price";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(718, 687);
+            this.ClientSize = new System.Drawing.Size(851, 687);
             this.ContextMenuStrip = this.menuStrip;
-            this.Controls.Add(this.readStatusLable);
+            this.Controls.Add(this.originalPriceLable);
+            this.Controls.Add(this.originalPriceList);
             this.Controls.Add(this.priceList);
+            this.Controls.Add(this.priceLable);
+            this.Controls.Add(this.splitter4);
+            this.Controls.Add(this.readStatusLable);
             this.Controls.Add(this.readStatusList);
             this.Controls.Add(this.splitter3);
             this.Controls.Add(this.authorNameLable);
@@ -227,7 +264,6 @@
             this.Controls.Add(this.bookTitleLable);
             this.Controls.Add(this.bookTitleList);
             this.Controls.Add(this.splitter1);
-            this.Controls.Add(this.priceLable);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -261,6 +297,9 @@
         private System.Windows.Forms.Splitter splitter3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.Splitter splitter4;
+        private System.Windows.Forms.ListBox originalPriceList;
+        private System.Windows.Forms.Label originalPriceLable;
     }
 }
 

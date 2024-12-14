@@ -25,31 +25,35 @@ namespace BookManagementSystem
         static ManageBooks()
         { 
                 List<string> Input = File.ReadAllLines("D:\\Coding Space\\C#\\BookManagementSystem\\Data.txt").ToList();
-                for (int i = 0; i < Input.Count; i++)
-                {
-                    int index = FindIndex(Input[i]);
-                    string Title = Input[i].Substring(0, index);
-                    Input[i] = Input[i].Substring(index + 1);
+            for (int i = 0; i < Input.Count; i++)
+            {
+                int index = FindIndex(Input[i]);
+                string Title = Input[i].Substring(0, index);
+                Input[i] = Input[i].Substring(index + 1);
 
-                    index = FindIndex(Input[i]);
-                    string AuthorName = Input[i].Substring(0, index);
-                    Input[i] = Input[i].Substring(index + 1);
+                index = FindIndex(Input[i]);
+                string AuthorName = Input[i].Substring(0, index);
+                Input[i] = Input[i].Substring(index + 1);
 
-                    index = FindIndex(Input[i]);
-                    bool ReadStatus = bool.Parse(Input[i].Substring(0, index));
-                    Input[i] = Input[i].Substring(index + 1);
+                index = FindIndex(Input[i]);
+                bool ReadStatus = bool.Parse(Input[i].Substring(0, index));
+                Input[i] = Input[i].Substring(index + 1);
 
-                    double BuyingPrice = double.Parse(Input[i]);
+                index = FindIndex(Input[i]);
+                double BuyingPrice = double.Parse(Input[i].Substring(0, index));
+                Input[i] = Input[i].Substring(index + 1);
 
-                    ListBooks.Add(new Book(Title, AuthorName, BuyingPrice, ReadStatus));
-                }
+                
+                double OriginalPrice = double.Parse(Input[i]);
+                ListBooks.Add(new Book(Title, AuthorName, BuyingPrice, OriginalPrice, ReadStatus));
+            }
         }
         public static void SaveBooksToFile()
         {
             string BookData = string.Empty;
             foreach (var item in ListBooks)
             {
-                   BookData += $"{item.Title};{item.AuthorName};{item.ReadStatus};{item.BuyingPrice}\n";
+                   BookData += $"{item.Title};{item.AuthorName};{item.ReadStatus};{item.BuyingPrice};{item.OriginalPrice}\n";
             }
             File.WriteAllText("D:\\Coding Space\\C#\\BookManagementSystem\\Data.txt", BookData);
         }

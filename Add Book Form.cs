@@ -23,7 +23,7 @@ namespace BookManagementSystem
 
             if (bookTitleTextBox.Text != string.Empty && authorNameTextBox.Text != string.Empty && priceTextBox.Text != string.Empty)
             {
-                ManageBooks.AddBook(new Book(bookTitleTextBox.Text, authorNameTextBox.Text, double.Parse(priceTextBox.Text), readOrNot.Checked));
+                ManageBooks.AddBook(new Book(bookTitleTextBox.Text, authorNameTextBox.Text, double.Parse(priceTextBox.Text), double.Parse(originalPriceTextBook.Text), readOrNot.Checked));
                 MessageBox.Show("Successfully");
                 Close();
             }
