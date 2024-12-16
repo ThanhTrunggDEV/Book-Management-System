@@ -42,6 +42,8 @@
             this.addBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.totaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buyingPriceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.originalPriceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.editBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitter1 = new System.Windows.Forms.Splitter();
@@ -151,13 +153,13 @@
             this.toolStripSeparator2,
             this.editBookToolStripMenuItem});
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(129, 82);
+            this.menuStrip.Size = new System.Drawing.Size(181, 104);
             // 
             // addBookToolStripMenuItem
             // 
             this.addBookToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addBookToolStripMenuItem.Image")));
             this.addBookToolStripMenuItem.Name = "addBookToolStripMenuItem";
-            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addBookToolStripMenuItem.Text = "Add Book";
             this.addBookToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -165,27 +167,43 @@
             // 
             this.toolStripSeparator1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(125, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // totaToolStripMenuItem
             // 
+            this.totaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.buyingPriceToolStripMenuItem,
+            this.originalPriceToolStripMenuItem});
             this.totaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("totaToolStripMenuItem.Image")));
             this.totaToolStripMenuItem.Name = "totaToolStripMenuItem";
-            this.totaToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.totaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.totaToolStripMenuItem.Text = "Total Price";
-            this.totaToolStripMenuItem.Click += new System.EventHandler(this.getTotalPrice_Click);
+            // 
+            // buyingPriceToolStripMenuItem
+            // 
+            this.buyingPriceToolStripMenuItem.Name = "buyingPriceToolStripMenuItem";
+            this.buyingPriceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buyingPriceToolStripMenuItem.Text = "Buying Price";
+            this.buyingPriceToolStripMenuItem.Click += new System.EventHandler(this.getTotalBuyingPrice_Click);
+            // 
+            // originalPriceToolStripMenuItem
+            // 
+            this.originalPriceToolStripMenuItem.Name = "originalPriceToolStripMenuItem";
+            this.originalPriceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.originalPriceToolStripMenuItem.Text = "Original Price";
+            this.originalPriceToolStripMenuItem.Click += new System.EventHandler(this.getTotalOriginalPrice_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(125, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // editBookToolStripMenuItem
             // 
             this.editBookToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editBookToolStripMenuItem.Image")));
             this.editBookToolStripMenuItem.Name = "editBookToolStripMenuItem";
-            this.editBookToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.editBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editBookToolStripMenuItem.Text = "Edit Book";
             this.editBookToolStripMenuItem.Click += new System.EventHandler(this.editBookButton_Click);
             // 
@@ -300,6 +318,8 @@
         private System.Windows.Forms.Splitter splitter4;
         private System.Windows.Forms.ListBox originalPriceList;
         private System.Windows.Forms.Label originalPriceLable;
+        private System.Windows.Forms.ToolStripMenuItem buyingPriceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem originalPriceToolStripMenuItem;
     }
 }
 

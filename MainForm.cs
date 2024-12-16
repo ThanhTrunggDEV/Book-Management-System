@@ -55,9 +55,13 @@ namespace BookManagementSystem
             ManageBooks.SaveBooksToFile();
         }
 
-        private void getTotalPrice_Click(object sender, EventArgs e)
+        private void getTotalBuyingPrice_Click(object sender, EventArgs e)
         {
-            ManageBooks.GetTotalPrice();
+            ManageBooks.GetTotalBuyingPrice();
+        }
+        private void getTotalOriginalPrice_Click(object sender, EventArgs e)
+        {
+            ManageBooks.GetTotalOriginalPrice();
         }
 
         private void editBookButton_Click(object sender, EventArgs e)
