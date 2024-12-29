@@ -150,6 +150,8 @@
             this.Controls.Add(this.readOrNot);
             this.Controls.Add(this.bookTitleTextBox);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "addBookForm";
             this.Text = "Add Book";
             this.ResumeLayout(false);

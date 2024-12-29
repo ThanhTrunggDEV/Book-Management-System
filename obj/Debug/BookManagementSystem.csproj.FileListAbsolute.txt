@@ -33,6 +33,4 @@ D:\Coding Space\C#\BookManagementSystem\obj\Debug\BookManagementSystem.csproj.Ge
 D:\Coding Space\C#\BookManagementSystem\obj\Debug\BookManagementSystem.csproj.CoreCompileInputs.cache
 D:\Coding Space\C#\BookManagementSystem\obj\Debug\BookManagementSystem.exe
 D:\Coding Space\C#\BookManagementSystem\obj\Debug\BookManagementSystem.pdb
-D:\Coding Space\C#\BookManagementSystem\obj\Debug\BookManagementSystem.editBookForm.resources
 D:\Coding Space\C#\BookManagementSystem\obj\Debug\BookManagementSystem.addBookForm.resources
-D:\Coding Space\C#\BookManagementSystem\obj\Debug\BookManagementSystem.Testing.resources

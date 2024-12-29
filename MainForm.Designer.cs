@@ -30,296 +30,291 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.bookTitleLable = new System.Windows.Forms.Label();
-            this.authorNameLable = new System.Windows.Forms.Label();
-            this.bookTitleList = new System.Windows.Forms.ListBox();
-            this.readStatusList = new System.Windows.Forms.ListBox();
-            this.priceList = new System.Windows.Forms.ListBox();
-            this.authorNameList = new System.Windows.Forms.ListBox();
-            this.readStatusLable = new System.Windows.Forms.Label();
-            this.priceLable = new System.Windows.Forms.Label();
-            this.menuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.addBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lvBooks = new System.Windows.Forms.ListView();
+            this.colOrder = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colTitle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colAuthor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colBuyingPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colOriginalPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colReadingStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsBtn_Add = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsBtn_Del = new System.Windows.Forms.ToolStripButton();
+            this.statusStrip2 = new System.Windows.Forms.StatusStrip();
+            this.tsLbl_OriginalPrice = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsLbl_BuyingPrice = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsLblDateTime = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tm = new System.Windows.Forms.Timer(this.components);
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.totaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buyingPriceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.originalPriceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.editBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.splitter2 = new System.Windows.Forms.Splitter();
-            this.splitter3 = new System.Windows.Forms.Splitter();
-            this.splitter4 = new System.Windows.Forms.Splitter();
-            this.originalPriceList = new System.Windows.Forms.ListBox();
-            this.originalPriceLable = new System.Windows.Forms.Label();
-            this.menuStrip.SuspendLayout();
+            this.tsCbbOption = new System.Windows.Forms.ToolStripComboBox();
+            this.tsTb = new System.Windows.Forms.ToolStripTextBox();
+            this.tsBtn_Edit = new System.Windows.Forms.ToolStripButton();
+            this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
+            this.toolStripContainer1.ContentPanel.SuspendLayout();
+            this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
+            this.toolStripContainer1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            this.statusStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bookTitleLable
+            // lvBooks
             // 
-            this.bookTitleLable.AutoSize = true;
-            this.bookTitleLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookTitleLable.Location = new System.Drawing.Point(85, 9);
-            this.bookTitleLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.bookTitleLable.Name = "bookTitleLable";
-            this.bookTitleLable.Size = new System.Drawing.Size(65, 13);
-            this.bookTitleLable.TabIndex = 4;
-            this.bookTitleLable.Text = "Book Title";
+            this.lvBooks.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.lvBooks.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.lvBooks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colOrder,
+            this.colTitle,
+            this.colAuthor,
+            this.colReadingStatus,
+            this.colBuyingPrice,
+            this.colOriginalPrice});
+            this.lvBooks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvBooks.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvBooks.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.lvBooks.FullRowSelect = true;
+            this.lvBooks.GridLines = true;
+            this.lvBooks.HideSelection = false;
+            this.lvBooks.Location = new System.Drawing.Point(0, 0);
+            this.lvBooks.Name = "lvBooks";
+            this.lvBooks.Size = new System.Drawing.Size(803, 640);
+            this.lvBooks.TabIndex = 1;
+            this.lvBooks.UseCompatibleStateImageBehavior = false;
+            this.lvBooks.View = System.Windows.Forms.View.Details;
+            this.lvBooks.SelectedIndexChanged += new System.EventHandler(this.lvBooks_SelectedIndexChanged);
             // 
-            // authorNameLable
+            // colOrder
             // 
-            this.authorNameLable.AutoSize = true;
-            this.authorNameLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.authorNameLable.Location = new System.Drawing.Point(296, 11);
-            this.authorNameLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.authorNameLable.Name = "authorNameLable";
-            this.authorNameLable.Size = new System.Drawing.Size(80, 13);
-            this.authorNameLable.TabIndex = 5;
-            this.authorNameLable.Text = "Author Name";
+            this.colOrder.Text = "Order";
+            this.colOrder.Width = 50;
             // 
-            // bookTitleList
+            // colTitle
             // 
-            this.bookTitleList.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.bookTitleList.FormattingEnabled = true;
-            this.bookTitleList.Location = new System.Drawing.Point(0, 28);
-            this.bookTitleList.Margin = new System.Windows.Forms.Padding(2);
-            this.bookTitleList.Name = "bookTitleList";
-            this.bookTitleList.Size = new System.Drawing.Size(242, 693);
-            this.bookTitleList.TabIndex = 7;
-            this.bookTitleList.TabStop = false;
+            this.colTitle.Text = "Title";
+            this.colTitle.Width = 250;
             // 
-            // readStatusList
+            // colAuthor
             // 
-            this.readStatusList.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.readStatusList.FormattingEnabled = true;
-            this.readStatusList.Location = new System.Drawing.Point(455, 28);
-            this.readStatusList.Margin = new System.Windows.Forms.Padding(2);
-            this.readStatusList.Name = "readStatusList";
-            this.readStatusList.Size = new System.Drawing.Size(97, 719);
-            this.readStatusList.TabIndex = 9;
-            this.readStatusList.TabStop = false;
+            this.colAuthor.Text = "Author";
+            this.colAuthor.Width = 200;
             // 
-            // priceList
+            // colBuyingPrice
             // 
-            this.priceList.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.priceList.FormattingEnabled = true;
-            this.priceList.Location = new System.Drawing.Point(552, 28);
-            this.priceList.Margin = new System.Windows.Forms.Padding(2);
-            this.priceList.Name = "priceList";
-            this.priceList.Size = new System.Drawing.Size(141, 667);
-            this.priceList.TabIndex = 10;
-            this.priceList.TabStop = false;
+            this.colBuyingPrice.Text = "Buying Price";
+            this.colBuyingPrice.Width = 100;
             // 
-            // authorNameList
+            // colOriginalPrice
             // 
-            this.authorNameList.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.authorNameList.FormattingEnabled = true;
-            this.authorNameList.Location = new System.Drawing.Point(242, 28);
-            this.authorNameList.Margin = new System.Windows.Forms.Padding(2);
-            this.authorNameList.Name = "authorNameList";
-            this.authorNameList.Size = new System.Drawing.Size(213, 706);
-            this.authorNameList.TabIndex = 11;
-            this.authorNameList.TabStop = false;
+            this.colOriginalPrice.Text = "Original Price";
+            this.colOriginalPrice.Width = 100;
             // 
-            // readStatusLable
+            // colReadingStatus
             // 
-            this.readStatusLable.AutoSize = true;
-            this.readStatusLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.readStatusLable.Location = new System.Drawing.Point(458, 9);
-            this.readStatusLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.readStatusLable.Name = "readStatusLable";
-            this.readStatusLable.Size = new System.Drawing.Size(94, 13);
-            this.readStatusLable.TabIndex = 12;
-            this.readStatusLable.Text = "Reading Status";
+            this.colReadingStatus.Text = "Status";
+            this.colReadingStatus.Width = 100;
             // 
-            // priceLable
+            // toolStripContainer1
             // 
-            this.priceLable.AutoSize = true;
-            this.priceLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceLable.Location = new System.Drawing.Point(588, 9);
-            this.priceLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.priceLable.Name = "priceLable";
-            this.priceLable.Size = new System.Drawing.Size(78, 13);
-            this.priceLable.TabIndex = 13;
-            this.priceLable.Text = "Buying Price";
             // 
-            // menuStrip
+            // toolStripContainer1.BottomToolStripPanel
             // 
-            this.menuStrip.ImeMode = System.Windows.Forms.ImeMode.HangulFull;
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addBookToolStripMenuItem,
+            this.toolStripContainer1.BottomToolStripPanel.Controls.Add(this.statusStrip2);
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.lvBooks);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(803, 640);
+            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            this.toolStripContainer1.Size = new System.Drawing.Size(803, 687);
+            this.toolStripContainer1.TabIndex = 2;
+            this.toolStripContainer1.Text = "toolStripContainer1";
+            // 
+            // toolStripContainer1.TopToolStripPanel
+            // 
+            this.toolStripContainer1.TopToolStripPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsBtn_Add,
+            this.toolStripSeparator3,
+            this.tsBtn_Del,
             this.toolStripSeparator1,
-            this.totaToolStripMenuItem,
             this.toolStripSeparator2,
-            this.editBookToolStripMenuItem});
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(181, 104);
+            this.tsCbbOption,
+            this.tsTb,
+            this.tsBtn_Edit});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(434, 25);
+            this.toolStrip1.TabIndex = 0;
             // 
-            // addBookToolStripMenuItem
+            // tsBtn_Add
             // 
-            this.addBookToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addBookToolStripMenuItem.Image")));
-            this.addBookToolStripMenuItem.Name = "addBookToolStripMenuItem";
-            this.addBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.addBookToolStripMenuItem.Text = "Add Book";
-            this.addBookToolStripMenuItem.Click += new System.EventHandler(this.button1_Click);
+            this.tsBtn_Add.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsBtn_Add.Image = ((System.Drawing.Image)(resources.GetObject("tsBtn_Add.Image")));
+            this.tsBtn_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBtn_Add.Name = "tsBtn_Add";
+            this.tsBtn_Add.Size = new System.Drawing.Size(23, 22);
+            this.tsBtn_Add.Text = "Add Book";
+            this.tsBtn_Add.Click += new System.EventHandler(this.btnAddBook_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsBtn_Del
+            // 
+            this.tsBtn_Del.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsBtn_Del.Image = ((System.Drawing.Image)(resources.GetObject("tsBtn_Del.Image")));
+            this.tsBtn_Del.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBtn_Del.Name = "tsBtn_Del";
+            this.tsBtn_Del.Size = new System.Drawing.Size(23, 22);
+            this.tsBtn_Del.Text = "Delete Book";
+            this.tsBtn_Del.Click += new System.EventHandler(this.tsBtn_Del_Click);
+            // 
+            // statusStrip2
+            // 
+            this.statusStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.statusStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsLbl_OriginalPrice,
+            this.tsLbl_BuyingPrice,
+            this.tsLblDateTime});
+            this.statusStrip2.Location = new System.Drawing.Point(0, 0);
+            this.statusStrip2.Name = "statusStrip2";
+            this.statusStrip2.Size = new System.Drawing.Size(803, 22);
+            this.statusStrip2.TabIndex = 1;
+            // 
+            // tsLbl_OriginalPrice
+            // 
+            this.tsLbl_OriginalPrice.Name = "tsLbl_OriginalPrice";
+            this.tsLbl_OriginalPrice.Size = new System.Drawing.Size(78, 17);
+            this.tsLbl_OriginalPrice.Text = "Original Price";
+            // 
+            // tsLbl_BuyingPrice
+            // 
+            this.tsLbl_BuyingPrice.Name = "tsLbl_BuyingPrice";
+            this.tsLbl_BuyingPrice.Size = new System.Drawing.Size(73, 17);
+            this.tsLbl_BuyingPrice.Text = "Buying Price";
+            // 
+            // tsLblDateTime
+            // 
+            this.tsLblDateTime.Name = "tsLblDateTime";
+            this.tsLblDateTime.Size = new System.Drawing.Size(60, 17);
+            this.tsLblDateTime.Text = "Date Time";
+            // 
+            // tm
+            // 
+            this.tm.Enabled = true;
+            this.tm.Interval = 1000;
+            this.tm.Tick += new System.EventHandler(this.tm_Tick);
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // totaToolStripMenuItem
-            // 
-            this.totaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.buyingPriceToolStripMenuItem,
-            this.originalPriceToolStripMenuItem});
-            this.totaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("totaToolStripMenuItem.Image")));
-            this.totaToolStripMenuItem.Name = "totaToolStripMenuItem";
-            this.totaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.totaToolStripMenuItem.Text = "Total Price";
-            // 
-            // buyingPriceToolStripMenuItem
-            // 
-            this.buyingPriceToolStripMenuItem.Name = "buyingPriceToolStripMenuItem";
-            this.buyingPriceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.buyingPriceToolStripMenuItem.Text = "Buying Price";
-            this.buyingPriceToolStripMenuItem.Click += new System.EventHandler(this.getTotalBuyingPrice_Click);
-            // 
-            // originalPriceToolStripMenuItem
-            // 
-            this.originalPriceToolStripMenuItem.Name = "originalPriceToolStripMenuItem";
-            this.originalPriceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.originalPriceToolStripMenuItem.Text = "Original Price";
-            this.originalPriceToolStripMenuItem.Click += new System.EventHandler(this.getTotalOriginalPrice_Click);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // editBookToolStripMenuItem
+            // tsCbbOption
             // 
-            this.editBookToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editBookToolStripMenuItem.Image")));
-            this.editBookToolStripMenuItem.Name = "editBookToolStripMenuItem";
-            this.editBookToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editBookToolStripMenuItem.Text = "Edit Book";
-            this.editBookToolStripMenuItem.Click += new System.EventHandler(this.editBookButton_Click);
+            this.tsCbbOption.Items.AddRange(new object[] {
+            "Title",
+            "Author",
+            "Status",
+            "Buying Price",
+            "Original Price"});
+            this.tsCbbOption.Name = "tsCbbOption";
+            this.tsCbbOption.Size = new System.Drawing.Size(100, 25);
+            this.tsCbbOption.Text = "Title";
+            this.tsCbbOption.ToolTipText = "Option To Edit";
+            this.tsCbbOption.TextChanged += new System.EventHandler(this.tsCbbOption_TextChanged);
             // 
-            // splitter1
+            // tsTb
             // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(242, 687);
-            this.splitter1.TabIndex = 17;
-            this.splitter1.TabStop = false;
+            this.tsTb.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tsTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tsTb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tsTb.Name = "tsTb";
+            this.tsTb.Size = new System.Drawing.Size(200, 25);
             // 
-            // splitter2
+            // tsBtn_Edit
             // 
-            this.splitter2.Location = new System.Drawing.Point(242, 0);
-            this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(213, 687);
-            this.splitter2.TabIndex = 18;
-            this.splitter2.TabStop = false;
-            // 
-            // splitter3
-            // 
-            this.splitter3.Location = new System.Drawing.Point(455, 0);
-            this.splitter3.Name = "splitter3";
-            this.splitter3.Size = new System.Drawing.Size(97, 687);
-            this.splitter3.TabIndex = 19;
-            this.splitter3.TabStop = false;
-            // 
-            // splitter4
-            // 
-            this.splitter4.Location = new System.Drawing.Point(552, 0);
-            this.splitter4.Name = "splitter4";
-            this.splitter4.Size = new System.Drawing.Size(141, 687);
-            this.splitter4.TabIndex = 20;
-            this.splitter4.TabStop = false;
-            // 
-            // originalPriceList
-            // 
-            this.originalPriceList.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.originalPriceList.FormattingEnabled = true;
-            this.originalPriceList.Location = new System.Drawing.Point(688, 28);
-            this.originalPriceList.Margin = new System.Windows.Forms.Padding(2);
-            this.originalPriceList.Name = "originalPriceList";
-            this.originalPriceList.Size = new System.Drawing.Size(163, 667);
-            this.originalPriceList.TabIndex = 21;
-            this.originalPriceList.TabStop = false;
-            // 
-            // originalPriceLable
-            // 
-            this.originalPriceLable.AutoSize = true;
-            this.originalPriceLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.originalPriceLable.Location = new System.Drawing.Point(732, 9);
-            this.originalPriceLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.originalPriceLable.Name = "originalPriceLable";
-            this.originalPriceLable.Size = new System.Drawing.Size(83, 13);
-            this.originalPriceLable.TabIndex = 22;
-            this.originalPriceLable.Text = "Original Price";
+            this.tsBtn_Edit.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tsBtn_Edit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsBtn_Edit.Image = ((System.Drawing.Image)(resources.GetObject("tsBtn_Edit.Image")));
+            this.tsBtn_Edit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBtn_Edit.Name = "tsBtn_Edit";
+            this.tsBtn_Edit.Size = new System.Drawing.Size(23, 22);
+            this.tsBtn_Edit.Text = "Edit";
+            this.tsBtn_Edit.Click += new System.EventHandler(this.tsBtn_Edit_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(851, 687);
-            this.ContextMenuStrip = this.menuStrip;
-            this.Controls.Add(this.originalPriceLable);
-            this.Controls.Add(this.originalPriceList);
-            this.Controls.Add(this.priceList);
-            this.Controls.Add(this.priceLable);
-            this.Controls.Add(this.splitter4);
-            this.Controls.Add(this.readStatusLable);
-            this.Controls.Add(this.readStatusList);
-            this.Controls.Add(this.splitter3);
-            this.Controls.Add(this.authorNameLable);
-            this.Controls.Add(this.authorNameList);
-            this.Controls.Add(this.splitter2);
-            this.Controls.Add(this.bookTitleLable);
-            this.Controls.Add(this.bookTitleList);
-            this.Controls.Add(this.splitter1);
+            this.ClientSize = new System.Drawing.Size(803, 687);
+            this.Controls.Add(this.toolStripContainer1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Book Management System";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.menuStrip.ResumeLayout(false);
+            this.toolStripContainer1.BottomToolStripPanel.ResumeLayout(false);
+            this.toolStripContainer1.BottomToolStripPanel.PerformLayout();
+            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
+            this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
+            this.toolStripContainer1.TopToolStripPanel.PerformLayout();
+            this.toolStripContainer1.ResumeLayout(false);
+            this.toolStripContainer1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.statusStrip2.ResumeLayout(false);
+            this.statusStrip2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label bookTitleLable;
-        private System.Windows.Forms.Label authorNameLable;
-        private System.Windows.Forms.ListBox bookTitleList;
-        private System.Windows.Forms.ListBox readStatusList;
-        private System.Windows.Forms.ListBox priceList;
-        private System.Windows.Forms.ListBox authorNameList;
-        private System.Windows.Forms.Label readStatusLable;
-        private System.Windows.Forms.Label priceLable;
-        private System.Windows.Forms.ContextMenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem addBookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem totaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editBookToolStripMenuItem;
-        private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Splitter splitter2;
-        private System.Windows.Forms.Splitter splitter3;
+        private System.Windows.Forms.ListView lvBooks;
+        private System.Windows.Forms.ColumnHeader colOrder;
+        private System.Windows.Forms.ColumnHeader colTitle;
+        private System.Windows.Forms.ColumnHeader colAuthor;
+        private System.Windows.Forms.ColumnHeader colReadingStatus;
+        private System.Windows.Forms.ColumnHeader colBuyingPrice;
+        private System.Windows.Forms.ColumnHeader colOriginalPrice;
+        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton tsBtn_Add;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton tsBtn_Del;
+        private System.Windows.Forms.StatusStrip statusStrip2;
+        private System.Windows.Forms.ToolStripStatusLabel tsLbl_OriginalPrice;
+        private System.Windows.Forms.ToolStripStatusLabel tsLbl_BuyingPrice;
+        private System.Windows.Forms.ToolStripStatusLabel tsLblDateTime;
+        private System.Windows.Forms.Timer tm;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.Splitter splitter4;
-        private System.Windows.Forms.ListBox originalPriceList;
-        private System.Windows.Forms.Label originalPriceLable;
-        private System.Windows.Forms.ToolStripMenuItem buyingPriceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem originalPriceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripComboBox tsCbbOption;
+        private System.Windows.Forms.ToolStripTextBox tsTb;
+        private System.Windows.Forms.ToolStripButton tsBtn_Edit;
     }
 }
 

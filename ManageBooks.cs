@@ -65,23 +65,23 @@ namespace BookManagementSystem
         {
             ListBooks.Remove(book);
         }
-        public static void GetTotalBuyingPrice()
+        public static double GetTotalBuyingPrice()
         {
             double totalPrice = 0;
             foreach (var item in ManageBooks.ListBooks)
             {
                 totalPrice += item.BuyingPrice;
             }
-            MessageBox.Show($"Your Total Amount Of Money With Discount Is {totalPrice} VNĐ");
+            return totalPrice;
         }
-        public static void GetTotalOriginalPrice()
+        public static double GetTotalOriginalPrice()
         {
             double totalPrice = 0;
             foreach (var item in ListBooks)
             {
                 totalPrice += item.OriginalPrice;
             }
-            MessageBox.Show($"Your Total Amount Of Money Without Discount Is {totalPrice} VNĐ");
+            return totalPrice;
         }
         public static void EditBook(Book oldBook, Book newBook)
         {
